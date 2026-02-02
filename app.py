@@ -5,9 +5,18 @@ import dropbox
 from dropbox.exceptions import ApiError
 from datetime import datetime
 import logging
+from flask_cors import CORS
 
 # Configuratie
 app = Flask(__name__)
+CORS(app)  # Allow CORS for all routes
+```
+
+5. Commit changes
+
+6. **Update ook `requirements.txt`** - voeg toe:
+```
+flask-cors==4.0.0
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
