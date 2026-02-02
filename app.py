@@ -1,5 +1,6 @@
 import os
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from docx import Document
 import dropbox
 from dropbox.exceptions import ApiError
@@ -9,6 +10,7 @@ from flask_cors import CORS
 
 # Configuratie
 app = Flask(__name__)
+CORS(app)  # Allow CORS for testing
 CORS(app)  # Allow CORS for all routes
 ```
 
